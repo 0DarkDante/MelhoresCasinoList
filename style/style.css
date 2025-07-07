@@ -273,7 +273,7 @@ main {
 /* section 4 */
 
 .gold-cards {
-  margin: 48px 0;
+  margin: 48px 0 0 0;
   padding-bottom: 100px;
 }
 
@@ -318,3 +318,18 @@ main {
     text-align: center;
     color: #fff;
 }
+
+/* section 6 */
+
+.game-section {
+  padding-bottom: 48px;
+}
+
+.game-section-items {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.game-section-item {}
