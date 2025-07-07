@@ -74,10 +74,6 @@ h3 {
 
 /* header */
 
-.goldText {
-  color: #FFB624;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -332,4 +328,79 @@ main {
     gap: 24px;
 }
 
-.game-section-item {}
+.site-footer {
+  background-color: #000;
+}
+
+.footer-container {}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    padding: 24px 0 52px 0;
+    gap: 60px;
+}
+
+.footer-info {}
+
+.footer-title {
+  font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-paragraph {
+  font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    margin-top: 16px;
+}
+
+.footer-links-block {}
+
+.footer-links {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-link {
+  font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+    color: #fff;
+}
+
+.footer-logo-item {
+  margin-top: 25px;
+}
+
+.footer-link-item {
+  
+}
+
+.footer-logo {
+  font-weight: 600;
+    font-size: 23px;
+    color: #fff;
+}
+
+.goldText {
+  font-weight: 900;
+    font-size: 24px;
+    background: linear-gradient(104deg, #ffb624 0%, #ffd400 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-end {
+  font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    margin-top: 24px;
+}
