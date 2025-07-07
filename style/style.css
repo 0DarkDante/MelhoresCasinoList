@@ -435,6 +435,26 @@ main {
     color: #fff;
 }
 
+@media (min-width: 768px) {
+  .gold-cards-items {
+    flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .gold-cards-item {
+      width: 544px;
+      height: 290px; 
+  }
+
+    .gold-cards-item h2 {
+      font-size: 32px;
+    }
+
+  .gold-cards-item p {
+    font-size: 16px;
+  }  
+}
+
 /* section 6 */
 
 .game-section {
