@@ -453,6 +453,10 @@ main {
   .gold-cards-item p {
     font-size: 16px;
   }  
+
+  .gold-cards {
+    padding-bottom: 250px;
+  }
 }
 
 /* section 6 */
@@ -543,6 +547,41 @@ main {
     text-align: center;
     color: #fff;
     margin-top: 24px;
+}
+
+@media (min-width: 1290px) {
+  .game-section-items {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }  
+
+  .footer-title {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .footer-link {
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .footer-paragraph {
+    text-align: left;
+    width: 868px;
+  }
+
+  .footer-links {
+    align-items: flex-end;
+  }
+
+  .footer-end {
+    text-align: right;
+  }
 }
 
 /* politica */
