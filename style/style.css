@@ -143,17 +143,118 @@ main {
   margin: 24px 0;  
 }
 
-.Descobre-btn-head {
+.Descobre-btn-head-main {
   display: block;
-  margin: 0 auto;
+    margin: 0 auto;
   border-radius: 10px;
-    width: 213px;
-    height: 49px;
+    padding: 15px 41px;
+    background: linear-gradient(0deg, #fff0da 1.04%, #94641e 4.17%, #fff2db 82.81%, #eac885 93.75%, #fbf5d1 97.92%, #bd9a4b 99.99%, #ecd8a3 100%);
     font-weight: 900;
-      font-size: 16px;
+      font-size: 18px;
       text-align: center;
       color: #000;
-      background: linear-gradient(0deg, #fff0da 1.04%, #94641e 4.17%, #fff2db 82.81%, #eac885 93.75%, #fbf5d1 97.92%, #bd9a4b 99.99%, #ecd8a3 100%);
+}
+
+.Descobre-btn-head {
+  position: relative;
+  display: block;
+  margin: 50px auto;
+  border-radius: 10px;
+  width: 213px;
+  height: 49px;
+  font-weight: 900;
+  font-size: 21px;
+  text-align: center;
+  line-height: 49px;
+  color: #000;
+  background: linear-gradient(0deg,
+      #fff0da 1.04%,
+      #94641e 4.17%,
+      #fff2db 82.81%,
+      #eac885 93.75%,
+      #fbf5d1 97.92%,
+      #bd9a4b 99.99%,
+      #ecd8a3 100%);
+  cursor: pointer;
+  overflow: visible;
+  transition: color 1.5s ease, background 1.5s ease;
+  border: none;
+}
+
+/* Псевдоелемент градієнтного бордера */
+.Descobre-btn-head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background:
+    linear-gradient(0deg,
+      #fff0da 1.04%,
+      #94641e 4.17%,
+      #fff2db 82.81%,
+      #eac885 93.75%,
+      #fbf5d1 97.92%,
+      #bd9a4b 99.99%,
+      #ecd8a3 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease;
+  z-index: 1;
+}
+
+/* Псевдоелемент градієнтного тексту */
+.Descobre-btn-head::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(0deg,
+      #fff0da 1.04%,
+      #94641e 4.17%,
+      #fff2db 82.81%,
+      #eac885 93.75%,
+      #fbf5d1 97.92%,
+      #bd9a4b 99.99%,
+      #ecd8a3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 21px;
+  transition: opacity 1.5s ease;
+  z-index: 2;
+  opacity: 0;
+  /* за замовчуванням невидимий */
+}
+
+/* Ховер — активуємо видимість */
+.Descobre-btn-head:hover {
+  background: none;
+  color: transparent;
+}
+
+.Descobre-btn-head:hover::before {
+  opacity: 1;
+}
+
+.Descobre-btn-head:hover::after {
+  opacity: 1;
 }
 
 .Descobre {
@@ -200,13 +301,46 @@ main {
 }
 
 .casino-card {
+  position: relative;
+  z-index: 1;
   margin: 0 auto;
-  border: 1px solid gold;
   border-radius: 20px;
-    padding: 30px 12px;
-    width: 343px;
-    height: 733px;
+  padding: 30px 12px;
+  width: 343px;
+  height: 733px;
   background: linear-gradient(83deg, #412801 0%, #000 100%);
+  color: #fff;
+  overflow: hidden;
+  /* щоб псевдоелемент не вилазив */
+}
+
+/* псевдоелемент з градієнтним бордером */
+.casino-card::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: 0;
+  border-radius: 23px;
+  /* трішки більше за основний */
+  padding: 6px;
+  /* товщина бордера */
+  background: linear-gradient(0deg,
+      #fff0da 1.04%,
+      #94641e 4.17%,
+      #fff2db 82.81%,
+      #eac885 93.75%,
+      #fbf5d1 97.92%,
+      #bd9a4b 99.99%,
+      #ecd8a3 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .card-section-dark {
@@ -308,7 +442,8 @@ main {
       margin: 0;
   }
 
-  .Descobre-btn-head {
+  .Descobre-btn-head,
+  .Descobre-btn-head-main {
     margin: 0 auto;
   }
 
@@ -339,11 +474,6 @@ main {
     margin-left: 24px;
   }
 
-  .card-btn2 {
-      width: 215px;
-      height: 60px;
-        font-size: 21px;
-  }
 }
 
 /* section 3 */
