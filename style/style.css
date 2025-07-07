@@ -101,6 +101,10 @@ h3 {
 
 /* section1 */
 
+main {
+  background-color: #000;
+}
+
 .Descobre {
   background-color: #000;
   padding: 112.5px 0;
@@ -234,4 +238,34 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+}
+
+/* section 3 */
+
+.section-info {
+  margin-top: 32px;
+  background-color: #000;
+}
+
+.info-item {
+
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+    gap: 24px;
+}
+
+.info-item p {
+  font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.info-item h2 {
+  font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 24px;
 }
