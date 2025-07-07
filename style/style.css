@@ -404,3 +404,50 @@ main {
     color: #fff;
     margin-top: 24px;
 }
+
+/* politica */
+
+.politic-cookie-h1 {
+  margin: 0 0 8px 0;
+  padding-top: 40px;
+}
+
+.politic-cookie-h1-p {
+  margin-bottom: 48px;
+}
+
+.politic-cookie-h2 {
+  font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.politic-cookie-h1 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+.politic-cookie-h1-p {
+  font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+}
+
+.politic-cookie-p {
+  font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.politic-cookie-item {
+  font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.politic-cookie-p-last {
+  margin-top: 16px;
+}
