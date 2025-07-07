@@ -72,6 +72,13 @@ h3 {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
 /* header */
 
 .header {
@@ -95,6 +102,13 @@ h3 {
   color: #fff;
 }
 
+@media (min-width: 768px) {
+  .header {
+    padding: 25px 119px;
+    background: linear-gradient(90deg, #000 0%, #907112 100%);
+  }
+}
+
 /* section1 */
 
 main {
@@ -102,7 +116,6 @@ main {
 }
 
 .Descobre {
-  background-color: #000;
   padding: 112.5px 0;
 }
 
@@ -136,6 +149,33 @@ main {
       color: #000;
       background: linear-gradient(0deg, #fff0da 1.04%, #94641e 4.17%, #fff2db 82.81%, #eac885 93.75%, #fbf5d1 97.92%, #bd9a4b 99.99%, #ecd8a3 100%);
 }
+
+.Descobre {
+  position: relative;
+  padding: 112.5px 0;
+  background: url('../IMG/cas.png') center center / cover no-repeat;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.Descobre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.Descobre>.container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+
+}
+
+
 
 /* section 2 */
 
@@ -453,4 +493,8 @@ main {
   font-weight: 400;
     font-size: 16px;
     color: #fff;
+}
+
+@media (min-width: 768px) {
+
 }
